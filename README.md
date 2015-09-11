@@ -15,7 +15,7 @@ createFormValues(aclForm, item)
 ```
 for each Acl collection item to create form in row
 
-client/AclAdmin.html just call the NeldRowsTable described in packages/forms-neld-row-table/NeldRowsTable.html 
+client/AclAdmin.html just call the NeldRowsTable described in [packages/forms-neld-row-table/NeldRowsTable.html](https://github.com/spastai/forms-neld-row-table/blob/master/packages/forms-neld-row-table/NeldRowsTable.html) 
 which iterates through those forms showing either value or form if the row is in edit mode
 ```
     <tbody>
