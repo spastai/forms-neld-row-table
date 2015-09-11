@@ -2,7 +2,7 @@
 Demonstration of forms-frame
 Most important file is client/AclAdmin.coffee
 it prepares rows 
-```
+```coffeescript
     forms = Acl.find(query).map (item)->
       formValues: createFormValues(aclForm, item)
       editMode: new ReactiveVar(false)
@@ -17,7 +17,7 @@ for each Acl collection item to create form in row
 
 client/AclAdmin.html just call the NeldRowsTable described in [packages/forms-neld-row-table/NeldRowsTable.html](https://github.com/spastai/forms-neld-row-table/blob/master/packages/forms-neld-row-table/NeldRowsTable.html) 
 which iterates through those forms showing either value or form if the row is in edit mode
-```
+```html
     <tbody>
       {{#each forms}}
       <tr>
