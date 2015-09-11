@@ -27,8 +27,6 @@ class @AclAdminController extends RouteController
     #d "Showing list for #{@params.objId}"
     query = if @params.objId then obj: @params.objId else {}
     forms = Acl.find(query).map (item)->
-      #item.username = item.user
-      #mappedValues = mapFormValues(aclForm, item);
       formValues: createFormValues(aclForm, item)
       editMode: new ReactiveVar(false)
       _id: item._id
@@ -52,6 +50,6 @@ class @AclAdminController extends RouteController
 
         remove: (event, template)->
           values = getFormValues(aclForm, template)
-          #d "Removing acl", @
+          d "Removing acl", @
           Acl.remove(@_id);
           @editMode.set(false);
